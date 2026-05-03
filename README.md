@@ -248,12 +248,9 @@ FarmPulse Alert | Crop: Tomato | Mandi: Mysuru | Signal: HOLD | Expected: ₹28/
 
 ---
 
-## 👥 Team
+Build By
 
-| Role | Name |
-|---|---|
-| Team Lead | **AAMINA FIRDOSE** |
-| Team Member | **NOOR ANNAM** |
+Junaid Shariff
 
 ---
 
