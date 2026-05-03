@@ -1,0 +1,110 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Global Styles */
+:root {
+  --dark-bg: #070D14;
+  --dark-card: #0F1824;
+  --dark-border: #1E293B;
+  --accent: #00E5D4;
+  --accent-hover: #00CCBB;
+  --signal-green: #22C55E;
+  --signal-amber: #F59E0B;
+  --signal-red: #EF4444;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background-color: var(--dark-bg);
+  color: #ffffff;
+  min-height: 100vh;
+}
+
+/* Scrollbar Styles */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--dark-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--dark-border);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #334155;
+}
+
+/* Custom Utility Classes */
+@layer components {
+  .card {
+    @apply bg-dark-card border border-dark-border rounded-lg p-4;
+  }
+  
+  .btn-primary {
+    @apply bg-accent text-dark-bg font-semibold px-4 py-2 rounded-lg;
+    @apply hover:bg-accent-hover transition-colors;
+  }
+  
+  .btn-secondary {
+    @apply bg-dark-card border border-dark-border text-white font-medium px-4 py-2 rounded-lg;
+    @apply hover:border-accent hover:text-accent transition-colors;
+  }
+  
+  .input {
+    @apply bg-dark-bg border border-dark-border rounded-lg px-4 py-2 text-white;
+    @apply focus:outline-none focus:border-accent transition-colors;
+  }
+  
+  .signal-green {
+    @apply bg-signal-green/20 text-signal-green border border-signal-green;
+  }
+  
+  .signal-amber {
+    @apply bg-signal-amber/20 text-signal-amber border border-signal-amber;
+  }
+  
+  .signal-red {
+    @apply bg-signal-red/20 text-signal-red border border-signal-red;
+  }
+}
+
+/* Animation keyframes */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 5px var(--accent);
+  }
+  50% {
+    box-shadow: 0 0 20px var(--accent);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.3s ease-out;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
