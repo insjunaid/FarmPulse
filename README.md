@@ -247,10 +247,8 @@ FarmPulse Alert | Crop: Tomato | Mandi: Mysuru | Signal: HOLD | Expected: ₹28/
 > See `backend/.env.example` for the full template.
 
 ---
+⚡ Built with logic, data & curiosity — by Junaid Shariff 🚀
 
-Build By
-
-Junaid Shariff
 
 ---
 
